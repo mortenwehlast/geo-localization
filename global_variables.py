@@ -1,4 +1,6 @@
 """ Global variables.
+
+All credit goes to Bjarke Felbo
 """
 import tempfile
 from os.path import abspath, dirname

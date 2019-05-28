@@ -1,4 +1,10 @@
 # -*- coding: utf-8 -*-
+
+""""
+All credit goes to Bjarke Felbo
+"""
+
+
 from __future__ import absolute_import, division
 
 import sys
