@@ -4,6 +4,16 @@
 Created on Thu May 23 15:25:08 2019
 
 @author: Morten
+
+Utilities for setting up the Hierarchical Attention Network 
+and extracting information.
+
+Implementation of full model is inspired by github user minqi (https://github.com/minqi)
+and his HNATT work.
+
+Attention layer is provided courtesy of Felbo, B., from his work on DeepMoji.
+
+
 """
 import numpy as np
 import json
