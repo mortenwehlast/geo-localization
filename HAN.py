@@ -9,20 +9,8 @@ import numpy as np
 import json
 import pickle
 
-#Keras utility
-from keras.engine.topology import Layer
-from keras.callbacks import Callback, ModelCheckpoint, EarlyStopping
-from keras.utils.np_utils import to_categorical
-from keras.layers import Embedding, Input, Dense, GRU, Bidirectional, TimeDistributed
-from keras import backend as K
-from keras import optimizers
-from keras.models import Model
-from keras import initializers as initializers, regularizers, constraints
 
-#DeepMoji attention
-from deepmoji.attlayer import AttentionWeightedAverage
-
-#Parameter tuning
+#Data utilities
 from sklearn.utils import class_weight
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV

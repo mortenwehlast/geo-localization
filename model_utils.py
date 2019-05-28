@@ -30,17 +30,7 @@ from keras.models import Model
 from keras import initializers as initializers, regularizers, constraints
 
 #DeepMoji attention
-from deepmoji.attlayer import AttentionWeightedAverage
-
-#Parameter tuning
-from sklearn.utils import class_weight
-from sklearn.model_selection import train_test_split
-from sklearn.model_selection import GridSearchCV
-from sklearn.externals.joblib import parallel_backend
-from sklearn.externals import joblib #To save CV results
-from keras.wrappers.scikit_learn import KerasClassifier
-
-
+from attlayer import AttentionWeightedAverage
 
 
 LEN_TWEET        = 30
