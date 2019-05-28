@@ -40,8 +40,7 @@ NUM_LABELS       = 49
 if __name__ == "__main__":
 #%% Load data
 
-    path = "/Users/Morten/Library/Mobile Documents/com~apple~CloudDocs/Studie/6. semester/Bachelor/Code/"
-    #path = ""
+    path = ""
     
     data             = np.load(path + 'dataset_full.npz')['tokenized_tweet_data']
     users_and_labels = np.load(path + 'dataset_full.npz')['users_and_labels']
@@ -58,7 +57,7 @@ if __name__ == "__main__":
     LEN_TWEET      = len(data[0][0])
     
     
-    #Create class weights
+    #Create class weights (balanced model)
     #class_weights = class_weight.compute_class_weight('balanced',
     #                                                 np.unique(state_labels),
     #                                                 state_labels)
@@ -84,7 +83,7 @@ if __name__ == "__main__":
     
     print('Data splits saved')
 #%%
-    RESULT_FOLDER = "/Users/Morten/Library/Mobile Documents/com~apple~CloudDocs/Studie/6. semester/Bachelor/Code/modelling/output/"
+    RESULT_FOLDER = ""
     SAVE_WORD_MODEL = True
     
     word_model_container = [0]

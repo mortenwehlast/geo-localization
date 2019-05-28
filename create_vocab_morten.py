@@ -13,7 +13,8 @@ from global_variables import SPECIAL_TOKENS
 
 
 
-word_counts_sorted_path = "/Users/Morten/Library/Mobile Documents/com~apple~CloudDocs/Studie/6. semester/Bachelor/Code/word_counts_sorted.npz"
+word_counts_sorted_path = "word_counts_sorted.npz"
+
 def create_vocab(word_counts_sorted_path = word_counts_sorted_path, max_words = 10000) :
     """ 
     Creates a vocabulary from the most popular words in the user tweets. 

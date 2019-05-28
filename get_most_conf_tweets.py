@@ -25,8 +25,8 @@ import matplotlib.pyplot as plt
 
 from model_utils import *
 
-u_results_path = "/Users/Morten/Library/Mobile Documents/com~apple~CloudDocs/Studie/6. semester/Bachelor/results/unbalanced/ub_results.json"
-b_results_path = "/Users/Morten/Library/Mobile Documents/com~apple~CloudDocs/Studie/6. semester/Bachelor/results/balanced_with_class_weights/results.json"
+u_results_path = "ub_results.json"
+b_results_path = "results.json"
 
 #Get results
 with open(u_results_path, 'rb') as file:
@@ -94,7 +94,7 @@ b_min_pred = b_preds[b_least_conf_idx]
 
 #%%
 #Load test data to visualize attention
-test_data_path = "/Users/Morten/Library/Mobile Documents/com~apple~CloudDocs/Studie/6. semester/Bachelor/Code/modelling/X_test.npz"
+test_data_path = "X_test.npz"
 test_data = np.load(test_data_path)['X_test']
 
 #Extract observations
@@ -104,11 +104,11 @@ u_min_conf_obs = test_data[u_least_conf_idx]
 b_min_conf_obs = test_data[b_least_conf_idx]
 
 #Get tweet attention maps
-w_u_model_path = "/Users/Morten/Library/Mobile Documents/com~apple~CloudDocs/Studie/6. semester/Bachelor/results/unbalanced/ub_final_model_weights.h5"
+w_u_model_path = "ub_final_model_weights.h5"
 u_model = build_model()
 u_model.load_weights(w_u_model_path)
 
-w_b_model_path = "/Users/Morten/Library/Mobile Documents/com~apple~CloudDocs/Studie/6. semester/Bachelor/results/balanced_with_class_weights/final_model_weights.h5" 
+w_b_model_path = "final_model_weights.h5" 
 b_model = build_model()
 b_model.load_weights(w_b_model_path)
 
@@ -131,11 +131,11 @@ u_min_tweet_most_att = u_min_conf_obs[u_min_tweet_most_att_idx]
 b_min_tweet_most_att = b_min_conf_obs[b_min_tweet_most_att_idx]
 
 #Get word attention maps
-w_u_word_model_path = "/Users/Morten/Library/Mobile Documents/com~apple~CloudDocs/Studie/6. semester/Bachelor/results/unbalanced/ub_final_word_model_weights.h5"
+w_u_word_model_path = "ub_final_word_model_weights.h5"
 u_word_model = build_word_model()
 u_word_model.load_weights(w_u_word_model_path)
 
-w_b_word_model_path = "/Users/Morten/Library/Mobile Documents/com~apple~CloudDocs/Studie/6. semester/Bachelor/results/balanced_with_class_weights/final_word_model_weights.h5"
+w_b_word_model_path = "final_word_model_weights.h5"
 b_word_model = build_word_model()
 b_word_model.load_weights(w_b_word_model_path)
 
